@@ -1,449 +1,449 @@
-// package tests;
+// // package tests;
 
-// import main.Driver_lab3a;
+// // import main.Driver_lab3a;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+// import static org.junit.jupiter.api.Assertions.assertEquals;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.util.Arrays;
-import java.util.Scanner;
+// import java.io.File;
+// import java.io.FileNotFoundException;
+// import java.util.Arrays;
+// import java.util.Scanner;
 
-// import org.junit.jupiter.api.Test;
-import org.junit.Test;
+// // import org.junit.jupiter.api.Test;
+// import org.junit.Test;
 
 
-public class Driver_lab3aTest {
-    String error = "An error occurred.";
+// public class Driver_lab3aTest {
+//     String error = "An error occurred.";
 
-    @Test
-    public void test1() {
-        File input1 = new File("./bin/lab3adata/input.3a.1.in");
-        File output1 = new File("./bin/lab3adata/input.3a.1.ans");
+//     @Test
+//     public void test1() {
+//         File input1 = new File("./bin/lab3adata/input.3a.1.in");
+//         File output1 = new File("./bin/lab3adata/input.3a.1.ans");
 
-        try (
-            Scanner inputReader1 = new Scanner(input1);
-            Scanner outputReader1 = new Scanner(output1);
-            ){
-            String strIn = inputReader1.nextLine();
-            String strAns = outputReader1.nextLine();
+//         try (
+//             Scanner inputReader1 = new Scanner(input1);
+//             Scanner outputReader1 = new Scanner(output1);
+//             ){
+//             String strIn = inputReader1.nextLine();
+//             String strAns = outputReader1.nextLine();
 
-            int[] input = Arrays.stream(strIn.split(" ")).mapToInt(Integer::parseInt).toArray();
-            int ans = Integer.parseInt(strAns);
-            int matrixSize = input[1];
-            System.out.println(ans);
+//             int[] input = Arrays.stream(strIn.split(" ")).mapToInt(Integer::parseInt).toArray();
+//             int ans = Integer.parseInt(strAns);
+//             int matrixSize = input[1];
+//             System.out.println(ans);
             
 
-            int[][] inputMatrix = new int[matrixSize][matrixSize];
+//             int[][] inputMatrix = new int[matrixSize][matrixSize];
             
-            while (inputReader1.hasNextLine()) {
-                int[] currentInputs;
+//             while (inputReader1.hasNextLine()) {
+//                 int[] currentInputs;
 
-                //  Populating our matrix.
-                for (int row = 0; row < matrixSize; row++){
-                    String nextLine = inputReader1.nextLine();
-                    currentInputs = Arrays.stream(nextLine.split(" ")).mapToInt(Integer::parseInt).toArray();
+//                 //  Populating our matrix.
+//                 for (int row = 0; row < matrixSize; row++){
+//                     String nextLine = inputReader1.nextLine();
+//                     currentInputs = Arrays.stream(nextLine.split(" ")).mapToInt(Integer::parseInt).toArray();
 
-                    for (int col = 0; col < matrixSize; col++) {
-                    inputMatrix[row][col] = currentInputs[col];
-                    }
-                }
+//                     for (int col = 0; col < matrixSize; col++) {
+//                     inputMatrix[row][col] = currentInputs[col];
+//                     }
+//                 }
 
-                System.out.println(Arrays.deepToString(inputMatrix));
-            }
-            System.out.println(Driver_lab3a.cofModDet(input[0],inputMatrix));
-            assertEquals(Driver_lab3a.cofModDet(input[0],inputMatrix), ans);
-        } catch (FileNotFoundException e) {
-            System.err.println(error);
-            e.printStackTrace();
-        }
-    }
+//                 System.out.println(Arrays.deepToString(inputMatrix));
+//             }
+//             System.out.println(Driver_lab3a.cofModDet(input[0],inputMatrix));
+//             assertEquals(Driver_lab3a.cofModDet(input[0],inputMatrix), ans);
+//         } catch (FileNotFoundException e) {
+//             System.err.println(error);
+//             e.printStackTrace();
+//         }
+//     }
     
-    @Test
-    public void test2() {
-        File input1 = new File("./bin/lab3adata/input.3a.2.in");
-        File output1 = new File("./bin/lab3adata/input.3a.2.ans");
+//     @Test
+//     public void test2() {
+//         File input1 = new File("./bin/lab3adata/input.3a.2.in");
+//         File output1 = new File("./bin/lab3adata/input.3a.2.ans");
 
-        try (
-            Scanner inputReader1 = new Scanner(input1);
-            Scanner outputReader1 = new Scanner(output1);
-            ){
-            String strIn = inputReader1.nextLine();
-            String strAns = outputReader1.nextLine();
+//         try (
+//             Scanner inputReader1 = new Scanner(input1);
+//             Scanner outputReader1 = new Scanner(output1);
+//             ){
+//             String strIn = inputReader1.nextLine();
+//             String strAns = outputReader1.nextLine();
 
-            int[] input = Arrays.stream(strIn.split(" ")).mapToInt(Integer::parseInt).toArray();
-            int ans = Integer.parseInt(strAns);
-            int matrixSize = input[1];
-            System.out.println(ans);
+//             int[] input = Arrays.stream(strIn.split(" ")).mapToInt(Integer::parseInt).toArray();
+//             int ans = Integer.parseInt(strAns);
+//             int matrixSize = input[1];
+//             System.out.println(ans);
             
 
-            int[][] inputMatrix = new int[matrixSize][matrixSize];
+//             int[][] inputMatrix = new int[matrixSize][matrixSize];
             
-            while (inputReader1.hasNextLine()) {
-                int[] currentInputs;
+//             while (inputReader1.hasNextLine()) {
+//                 int[] currentInputs;
 
-                //  Populating our matrix.
-                for (int row = 0; row < matrixSize; row++){
-                    String nextLine = inputReader1.nextLine();
-                    currentInputs = Arrays.stream(nextLine.split(" ")).mapToInt(Integer::parseInt).toArray();
+//                 //  Populating our matrix.
+//                 for (int row = 0; row < matrixSize; row++){
+//                     String nextLine = inputReader1.nextLine();
+//                     currentInputs = Arrays.stream(nextLine.split(" ")).mapToInt(Integer::parseInt).toArray();
 
-                    for (int col = 0; col < matrixSize; col++) {
-                    inputMatrix[row][col] = currentInputs[col];
-                    }
-                }
+//                     for (int col = 0; col < matrixSize; col++) {
+//                     inputMatrix[row][col] = currentInputs[col];
+//                     }
+//                 }
 
-                System.out.println(Arrays.deepToString(inputMatrix));
-            }
-            System.out.println(Driver_lab3a.cofModDet(input[0],inputMatrix));
-            assertEquals(Driver_lab3a.cofModDet(input[0],inputMatrix), ans);
-        } catch (FileNotFoundException e) {
-            System.err.println(error);
-            e.printStackTrace();
-        }
-    }
+//                 System.out.println(Arrays.deepToString(inputMatrix));
+//             }
+//             System.out.println(Driver_lab3a.cofModDet(input[0],inputMatrix));
+//             assertEquals(Driver_lab3a.cofModDet(input[0],inputMatrix), ans);
+//         } catch (FileNotFoundException e) {
+//             System.err.println(error);
+//             e.printStackTrace();
+//         }
+//     }
     
-    @Test
-    public void test3() {
-        File input1 = new File("./bin/lab3adata/input.3a.3.in");
-        File output1 = new File("./bin/lab3adata/input.3a.3.ans");
+//     @Test
+//     public void test3() {
+//         File input1 = new File("./bin/lab3adata/input.3a.3.in");
+//         File output1 = new File("./bin/lab3adata/input.3a.3.ans");
 
-        try (
-            Scanner inputReader1 = new Scanner(input1);
-            Scanner outputReader1 = new Scanner(output1);
-            ){
-            String strIn = inputReader1.nextLine();
-            String strAns = outputReader1.nextLine();
+//         try (
+//             Scanner inputReader1 = new Scanner(input1);
+//             Scanner outputReader1 = new Scanner(output1);
+//             ){
+//             String strIn = inputReader1.nextLine();
+//             String strAns = outputReader1.nextLine();
 
-            int[] input = Arrays.stream(strIn.split(" ")).mapToInt(Integer::parseInt).toArray();
-            int ans = Integer.parseInt(strAns);
-            int matrixSize = input[1];
-            System.out.println(ans);
+//             int[] input = Arrays.stream(strIn.split(" ")).mapToInt(Integer::parseInt).toArray();
+//             int ans = Integer.parseInt(strAns);
+//             int matrixSize = input[1];
+//             System.out.println(ans);
             
 
-            int[][] inputMatrix = new int[matrixSize][matrixSize];
+//             int[][] inputMatrix = new int[matrixSize][matrixSize];
             
-            while (inputReader1.hasNextLine()) {
-                int[] currentInputs;
+//             while (inputReader1.hasNextLine()) {
+//                 int[] currentInputs;
 
-                //  Populating our matrix.
-                for (int row = 0; row < matrixSize; row++){
-                    String nextLine = inputReader1.nextLine();
-                    currentInputs = Arrays.stream(nextLine.split(" ")).mapToInt(Integer::parseInt).toArray();
+//                 //  Populating our matrix.
+//                 for (int row = 0; row < matrixSize; row++){
+//                     String nextLine = inputReader1.nextLine();
+//                     currentInputs = Arrays.stream(nextLine.split(" ")).mapToInt(Integer::parseInt).toArray();
 
-                    for (int col = 0; col < matrixSize; col++) {
-                    inputMatrix[row][col] = currentInputs[col];
-                    }
-                }
+//                     for (int col = 0; col < matrixSize; col++) {
+//                     inputMatrix[row][col] = currentInputs[col];
+//                     }
+//                 }
 
-                System.out.println(Arrays.deepToString(inputMatrix));
-            }
-            System.out.println(Driver_lab3a.cofModDet(input[0],inputMatrix));
-            assertEquals(Driver_lab3a.cofModDet(input[0],inputMatrix), ans);
-        } catch (FileNotFoundException e) {
-            System.err.println(error);
-            e.printStackTrace();
-        }
-    }
+//                 System.out.println(Arrays.deepToString(inputMatrix));
+//             }
+//             System.out.println(Driver_lab3a.cofModDet(input[0],inputMatrix));
+//             assertEquals(Driver_lab3a.cofModDet(input[0],inputMatrix), ans);
+//         } catch (FileNotFoundException e) {
+//             System.err.println(error);
+//             e.printStackTrace();
+//         }
+//     }
     
-    @Test
-    public void test4() {
-        File input1 = new File("./bin/lab3adata/input.3a.4.in");
-        File output1 = new File("./bin/lab3adata/input.3a.4.ans");
+//     @Test
+//     public void test4() {
+//         File input1 = new File("./bin/lab3adata/input.3a.4.in");
+//         File output1 = new File("./bin/lab3adata/input.3a.4.ans");
 
-        try (
-            Scanner inputReader1 = new Scanner(input1);
-            Scanner outputReader1 = new Scanner(output1);
-            ){
-            String strIn = inputReader1.nextLine();
-            String strAns = outputReader1.nextLine();
+//         try (
+//             Scanner inputReader1 = new Scanner(input1);
+//             Scanner outputReader1 = new Scanner(output1);
+//             ){
+//             String strIn = inputReader1.nextLine();
+//             String strAns = outputReader1.nextLine();
 
-            int[] input = Arrays.stream(strIn.split(" ")).mapToInt(Integer::parseInt).toArray();
-            int ans = Integer.parseInt(strAns);
-            int matrixSize = input[1];
-            System.out.println(ans);
+//             int[] input = Arrays.stream(strIn.split(" ")).mapToInt(Integer::parseInt).toArray();
+//             int ans = Integer.parseInt(strAns);
+//             int matrixSize = input[1];
+//             System.out.println(ans);
             
 
-            int[][] inputMatrix = new int[matrixSize][matrixSize];
+//             int[][] inputMatrix = new int[matrixSize][matrixSize];
             
-            while (inputReader1.hasNextLine()) {
-                int[] currentInputs;
+//             while (inputReader1.hasNextLine()) {
+//                 int[] currentInputs;
 
-                //  Populating our matrix.
-                for (int row = 0; row < matrixSize; row++){
-                    String nextLine = inputReader1.nextLine();
-                    currentInputs = Arrays.stream(nextLine.split(" ")).mapToInt(Integer::parseInt).toArray();
+//                 //  Populating our matrix.
+//                 for (int row = 0; row < matrixSize; row++){
+//                     String nextLine = inputReader1.nextLine();
+//                     currentInputs = Arrays.stream(nextLine.split(" ")).mapToInt(Integer::parseInt).toArray();
 
-                    for (int col = 0; col < matrixSize; col++) {
-                    inputMatrix[row][col] = currentInputs[col];
-                    }
-                }
+//                     for (int col = 0; col < matrixSize; col++) {
+//                     inputMatrix[row][col] = currentInputs[col];
+//                     }
+//                 }
 
-                System.out.println(Arrays.deepToString(inputMatrix));
-            }
-            System.out.println(Driver_lab3a.cofModDet(input[0],inputMatrix));
-            assertEquals(Driver_lab3a.cofModDet(input[0],inputMatrix), ans);
-        } catch (FileNotFoundException e) {
-            System.err.println(error);
-            e.printStackTrace();
-        }
-    }
+//                 System.out.println(Arrays.deepToString(inputMatrix));
+//             }
+//             System.out.println(Driver_lab3a.cofModDet(input[0],inputMatrix));
+//             assertEquals(Driver_lab3a.cofModDet(input[0],inputMatrix), ans);
+//         } catch (FileNotFoundException e) {
+//             System.err.println(error);
+//             e.printStackTrace();
+//         }
+//     }
     
-    @Test
-    public void test5() {
-        File input1 = new File("./bin/lab3adata/input.3a.5.in");
-        File output1 = new File("./bin/lab3adata/input.3a.5.ans");
+//     @Test
+//     public void test5() {
+//         File input1 = new File("./bin/lab3adata/input.3a.5.in");
+//         File output1 = new File("./bin/lab3adata/input.3a.5.ans");
 
-        try (
-            Scanner inputReader1 = new Scanner(input1);
-            Scanner outputReader1 = new Scanner(output1);
-            ){
-            String strIn = inputReader1.nextLine();
-            String strAns = outputReader1.nextLine();
+//         try (
+//             Scanner inputReader1 = new Scanner(input1);
+//             Scanner outputReader1 = new Scanner(output1);
+//             ){
+//             String strIn = inputReader1.nextLine();
+//             String strAns = outputReader1.nextLine();
 
-            int[] input = Arrays.stream(strIn.split(" ")).mapToInt(Integer::parseInt).toArray();
-            int ans = Integer.parseInt(strAns);
-            int matrixSize = input[1];
-            System.out.println(ans);
+//             int[] input = Arrays.stream(strIn.split(" ")).mapToInt(Integer::parseInt).toArray();
+//             int ans = Integer.parseInt(strAns);
+//             int matrixSize = input[1];
+//             System.out.println(ans);
             
 
-            int[][] inputMatrix = new int[matrixSize][matrixSize];
+//             int[][] inputMatrix = new int[matrixSize][matrixSize];
             
-            while (inputReader1.hasNextLine()) {
-                int[] currentInputs;
+//             while (inputReader1.hasNextLine()) {
+//                 int[] currentInputs;
 
-                //  Populating our matrix.
-                for (int row = 0; row < matrixSize; row++){
-                    String nextLine = inputReader1.nextLine();
-                    currentInputs = Arrays.stream(nextLine.split(" ")).mapToInt(Integer::parseInt).toArray();
+//                 //  Populating our matrix.
+//                 for (int row = 0; row < matrixSize; row++){
+//                     String nextLine = inputReader1.nextLine();
+//                     currentInputs = Arrays.stream(nextLine.split(" ")).mapToInt(Integer::parseInt).toArray();
 
-                    for (int col = 0; col < matrixSize; col++) {
-                    inputMatrix[row][col] = currentInputs[col];
-                    }
-                }
+//                     for (int col = 0; col < matrixSize; col++) {
+//                     inputMatrix[row][col] = currentInputs[col];
+//                     }
+//                 }
 
-                System.out.println(Arrays.deepToString(inputMatrix));
-            }
-            System.out.println(Driver_lab3a.cofModDet(input[0],inputMatrix));
-            assertEquals(Driver_lab3a.cofModDet(input[0],inputMatrix), ans);
-        } catch (FileNotFoundException e) {
-            System.err.println(error);
-            e.printStackTrace();
-        }
-    }
+//                 System.out.println(Arrays.deepToString(inputMatrix));
+//             }
+//             System.out.println(Driver_lab3a.cofModDet(input[0],inputMatrix));
+//             assertEquals(Driver_lab3a.cofModDet(input[0],inputMatrix), ans);
+//         } catch (FileNotFoundException e) {
+//             System.err.println(error);
+//             e.printStackTrace();
+//         }
+//     }
     
-    @Test
-    public void test6() {
-        File input1 = new File("./bin/lab3adata/input.3a.6.in");
-        File output1 = new File("./bin/lab3adata/input.3a.6.ans");
+//     @Test
+//     public void test6() {
+//         File input1 = new File("./bin/lab3adata/input.3a.6.in");
+//         File output1 = new File("./bin/lab3adata/input.3a.6.ans");
 
-        try (
-            Scanner inputReader1 = new Scanner(input1);
-            Scanner outputReader1 = new Scanner(output1);
-            ){
-            String strIn = inputReader1.nextLine();
-            String strAns = outputReader1.nextLine();
+//         try (
+//             Scanner inputReader1 = new Scanner(input1);
+//             Scanner outputReader1 = new Scanner(output1);
+//             ){
+//             String strIn = inputReader1.nextLine();
+//             String strAns = outputReader1.nextLine();
 
-            int[] input = Arrays.stream(strIn.split(" ")).mapToInt(Integer::parseInt).toArray();
-            int ans = Integer.parseInt(strAns);
-            int matrixSize = input[1];
-            System.out.println(ans);
+//             int[] input = Arrays.stream(strIn.split(" ")).mapToInt(Integer::parseInt).toArray();
+//             int ans = Integer.parseInt(strAns);
+//             int matrixSize = input[1];
+//             System.out.println(ans);
             
 
-            int[][] inputMatrix = new int[matrixSize][matrixSize];
+//             int[][] inputMatrix = new int[matrixSize][matrixSize];
             
-            while (inputReader1.hasNextLine()) {
-                int[] currentInputs;
+//             while (inputReader1.hasNextLine()) {
+//                 int[] currentInputs;
 
-                //  Populating our matrix.
-                for (int row = 0; row < matrixSize; row++){
-                    String nextLine = inputReader1.nextLine();
-                    currentInputs = Arrays.stream(nextLine.split(" ")).mapToInt(Integer::parseInt).toArray();
+//                 //  Populating our matrix.
+//                 for (int row = 0; row < matrixSize; row++){
+//                     String nextLine = inputReader1.nextLine();
+//                     currentInputs = Arrays.stream(nextLine.split(" ")).mapToInt(Integer::parseInt).toArray();
 
-                    for (int col = 0; col < matrixSize; col++) {
-                    inputMatrix[row][col] = currentInputs[col];
-                    }
-                }
+//                     for (int col = 0; col < matrixSize; col++) {
+//                     inputMatrix[row][col] = currentInputs[col];
+//                     }
+//                 }
 
-                System.out.println(Arrays.deepToString(inputMatrix));
-            }
-            System.out.println(Driver_lab3a.cofModDet(input[0],inputMatrix));
-            assertEquals(Driver_lab3a.cofModDet(input[0],inputMatrix), ans);
-        } catch (FileNotFoundException e) {
-            System.err.println(error);
-            e.printStackTrace();
-        }
-    }
+//                 System.out.println(Arrays.deepToString(inputMatrix));
+//             }
+//             System.out.println(Driver_lab3a.cofModDet(input[0],inputMatrix));
+//             assertEquals(Driver_lab3a.cofModDet(input[0],inputMatrix), ans);
+//         } catch (FileNotFoundException e) {
+//             System.err.println(error);
+//             e.printStackTrace();
+//         }
+//     }
     
-    @Test
-    public void test7() {
-        File input1 = new File("./bin/lab3adata/input.3a.7.in");
-        File output1 = new File("./bin/lab3adata/input.3a.7.ans");
+//     @Test
+//     public void test7() {
+//         File input1 = new File("./bin/lab3adata/input.3a.7.in");
+//         File output1 = new File("./bin/lab3adata/input.3a.7.ans");
 
-        try (
-            Scanner inputReader1 = new Scanner(input1);
-            Scanner outputReader1 = new Scanner(output1);
-            ){
-            String strIn = inputReader1.nextLine();
-            String strAns = outputReader1.nextLine();
+//         try (
+//             Scanner inputReader1 = new Scanner(input1);
+//             Scanner outputReader1 = new Scanner(output1);
+//             ){
+//             String strIn = inputReader1.nextLine();
+//             String strAns = outputReader1.nextLine();
 
-            int[] input = Arrays.stream(strIn.split(" ")).mapToInt(Integer::parseInt).toArray();
-            int ans = Integer.parseInt(strAns);
-            int matrixSize = input[1];
-            System.out.println(ans);
+//             int[] input = Arrays.stream(strIn.split(" ")).mapToInt(Integer::parseInt).toArray();
+//             int ans = Integer.parseInt(strAns);
+//             int matrixSize = input[1];
+//             System.out.println(ans);
             
 
-            int[][] inputMatrix = new int[matrixSize][matrixSize];
+//             int[][] inputMatrix = new int[matrixSize][matrixSize];
             
-            while (inputReader1.hasNextLine()) {
-                int[] currentInputs;
+//             while (inputReader1.hasNextLine()) {
+//                 int[] currentInputs;
 
-                //  Populating our matrix.
-                for (int row = 0; row < matrixSize; row++){
-                    String nextLine = inputReader1.nextLine();
-                    currentInputs = Arrays.stream(nextLine.split(" ")).mapToInt(Integer::parseInt).toArray();
+//                 //  Populating our matrix.
+//                 for (int row = 0; row < matrixSize; row++){
+//                     String nextLine = inputReader1.nextLine();
+//                     currentInputs = Arrays.stream(nextLine.split(" ")).mapToInt(Integer::parseInt).toArray();
 
-                    for (int col = 0; col < matrixSize; col++) {
-                    inputMatrix[row][col] = currentInputs[col];
-                    }
-                }
+//                     for (int col = 0; col < matrixSize; col++) {
+//                     inputMatrix[row][col] = currentInputs[col];
+//                     }
+//                 }
 
-                System.out.println(Arrays.deepToString(inputMatrix));
-            }
-            System.out.println(Driver_lab3a.cofModDet(input[0],inputMatrix));
-            assertEquals(Driver_lab3a.cofModDet(input[0],inputMatrix), ans);
-        } catch (FileNotFoundException e) {
-            System.err.println(error);
-            e.printStackTrace();
-        }
-    }
+//                 System.out.println(Arrays.deepToString(inputMatrix));
+//             }
+//             System.out.println(Driver_lab3a.cofModDet(input[0],inputMatrix));
+//             assertEquals(Driver_lab3a.cofModDet(input[0],inputMatrix), ans);
+//         } catch (FileNotFoundException e) {
+//             System.err.println(error);
+//             e.printStackTrace();
+//         }
+//     }
     
-    @Test
-    public void test8() {
-        File input1 = new File("./bin/lab3adata/input.3a.8.in");
-        File output1 = new File("./bin/lab3adata/input.3a.8.ans");
+//     @Test
+//     public void test8() {
+//         File input1 = new File("./bin/lab3adata/input.3a.8.in");
+//         File output1 = new File("./bin/lab3adata/input.3a.8.ans");
 
-        try (
-            Scanner inputReader1 = new Scanner(input1);
-            Scanner outputReader1 = new Scanner(output1);
-            ){
-            String strIn = inputReader1.nextLine();
-            String strAns = outputReader1.nextLine();
+//         try (
+//             Scanner inputReader1 = new Scanner(input1);
+//             Scanner outputReader1 = new Scanner(output1);
+//             ){
+//             String strIn = inputReader1.nextLine();
+//             String strAns = outputReader1.nextLine();
 
-            int[] input = Arrays.stream(strIn.split(" ")).mapToInt(Integer::parseInt).toArray();
-            int ans = Integer.parseInt(strAns);
-            int matrixSize = input[1];
-            System.out.println(ans);
+//             int[] input = Arrays.stream(strIn.split(" ")).mapToInt(Integer::parseInt).toArray();
+//             int ans = Integer.parseInt(strAns);
+//             int matrixSize = input[1];
+//             System.out.println(ans);
             
 
-            int[][] inputMatrix = new int[matrixSize][matrixSize];
+//             int[][] inputMatrix = new int[matrixSize][matrixSize];
             
-            while (inputReader1.hasNextLine()) {
-                int[] currentInputs;
+//             while (inputReader1.hasNextLine()) {
+//                 int[] currentInputs;
 
-                //  Populating our matrix.
-                for (int row = 0; row < matrixSize; row++){
-                    String nextLine = inputReader1.nextLine();
-                    currentInputs = Arrays.stream(nextLine.split(" ")).mapToInt(Integer::parseInt).toArray();
+//                 //  Populating our matrix.
+//                 for (int row = 0; row < matrixSize; row++){
+//                     String nextLine = inputReader1.nextLine();
+//                     currentInputs = Arrays.stream(nextLine.split(" ")).mapToInt(Integer::parseInt).toArray();
 
-                    for (int col = 0; col < matrixSize; col++) {
-                    inputMatrix[row][col] = currentInputs[col];
-                    }
-                }
+//                     for (int col = 0; col < matrixSize; col++) {
+//                     inputMatrix[row][col] = currentInputs[col];
+//                     }
+//                 }
 
-                System.out.println(Arrays.deepToString(inputMatrix));
-            }
-            System.out.println(Driver_lab3a.cofModDet(input[0],inputMatrix));
-            assertEquals(Driver_lab3a.cofModDet(input[0],inputMatrix), ans);
-        } catch (FileNotFoundException e) {
-            System.err.println(error);
-            e.printStackTrace();
-        }
-    }
+//                 System.out.println(Arrays.deepToString(inputMatrix));
+//             }
+//             System.out.println(Driver_lab3a.cofModDet(input[0],inputMatrix));
+//             assertEquals(Driver_lab3a.cofModDet(input[0],inputMatrix), ans);
+//         } catch (FileNotFoundException e) {
+//             System.err.println(error);
+//             e.printStackTrace();
+//         }
+//     }
     
-    @Test
-    public void test9() {
-        File input1 = new File("./bin/lab3adata/input.3a.9.in");
-        File output1 = new File("./bin/lab3adata/input.3a.9.ans");
+//     @Test
+//     public void test9() {
+//         File input1 = new File("./bin/lab3adata/input.3a.9.in");
+//         File output1 = new File("./bin/lab3adata/input.3a.9.ans");
 
-        try (
-            Scanner inputReader1 = new Scanner(input1);
-            Scanner outputReader1 = new Scanner(output1);
-            ){
-            String strIn = inputReader1.nextLine();
-            String strAns = outputReader1.nextLine();
+//         try (
+//             Scanner inputReader1 = new Scanner(input1);
+//             Scanner outputReader1 = new Scanner(output1);
+//             ){
+//             String strIn = inputReader1.nextLine();
+//             String strAns = outputReader1.nextLine();
 
-            int[] input = Arrays.stream(strIn.split(" ")).mapToInt(Integer::parseInt).toArray();
-            int ans = Integer.parseInt(strAns);
-            int matrixSize = input[1];
-            System.out.println(ans);
+//             int[] input = Arrays.stream(strIn.split(" ")).mapToInt(Integer::parseInt).toArray();
+//             int ans = Integer.parseInt(strAns);
+//             int matrixSize = input[1];
+//             System.out.println(ans);
             
 
-            int[][] inputMatrix = new int[matrixSize][matrixSize];
+//             int[][] inputMatrix = new int[matrixSize][matrixSize];
             
-            while (inputReader1.hasNextLine()) {
-                int[] currentInputs;
+//             while (inputReader1.hasNextLine()) {
+//                 int[] currentInputs;
 
-                //  Populating our matrix.
-                for (int row = 0; row < matrixSize; row++){
-                    String nextLine = inputReader1.nextLine();
-                    currentInputs = Arrays.stream(nextLine.split(" ")).mapToInt(Integer::parseInt).toArray();
+//                 //  Populating our matrix.
+//                 for (int row = 0; row < matrixSize; row++){
+//                     String nextLine = inputReader1.nextLine();
+//                     currentInputs = Arrays.stream(nextLine.split(" ")).mapToInt(Integer::parseInt).toArray();
 
-                    for (int col = 0; col < matrixSize; col++) {
-                    inputMatrix[row][col] = currentInputs[col];
-                    }
-                }
+//                     for (int col = 0; col < matrixSize; col++) {
+//                     inputMatrix[row][col] = currentInputs[col];
+//                     }
+//                 }
 
-                System.out.println(Arrays.deepToString(inputMatrix));
-            }
-            System.out.println(Driver_lab3a.cofModDet(input[0],inputMatrix));
-            assertEquals(Driver_lab3a.cofModDet(input[0],inputMatrix), ans);
-        } catch (FileNotFoundException e) {
-            System.err.println(error);
-            e.printStackTrace();
-        }
-    }
+//                 System.out.println(Arrays.deepToString(inputMatrix));
+//             }
+//             System.out.println(Driver_lab3a.cofModDet(input[0],inputMatrix));
+//             assertEquals(Driver_lab3a.cofModDet(input[0],inputMatrix), ans);
+//         } catch (FileNotFoundException e) {
+//             System.err.println(error);
+//             e.printStackTrace();
+//         }
+//     }
     
-    @Test
-    public void test10() {
-        File input1 = new File("./bin/lab3adata/input.3a.10.in");
-        File output1 = new File("./bin/lab3adata/input.3a.10.ans");
+//     @Test
+//     public void test10() {
+//         File input1 = new File("./bin/lab3adata/input.3a.10.in");
+//         File output1 = new File("./bin/lab3adata/input.3a.10.ans");
 
-        try (
-            Scanner inputReader1 = new Scanner(input1);
-            Scanner outputReader1 = new Scanner(output1);
-            ){
-            String strIn = inputReader1.nextLine();
-            String strAns = outputReader1.nextLine();
+//         try (
+//             Scanner inputReader1 = new Scanner(input1);
+//             Scanner outputReader1 = new Scanner(output1);
+//             ){
+//             String strIn = inputReader1.nextLine();
+//             String strAns = outputReader1.nextLine();
 
-            int[] input = Arrays.stream(strIn.split(" ")).mapToInt(Integer::parseInt).toArray();
-            int ans = Integer.parseInt(strAns);
-            int matrixSize = input[1];
-            System.out.println(ans);
+//             int[] input = Arrays.stream(strIn.split(" ")).mapToInt(Integer::parseInt).toArray();
+//             int ans = Integer.parseInt(strAns);
+//             int matrixSize = input[1];
+//             System.out.println(ans);
             
 
-            int[][] inputMatrix = new int[matrixSize][matrixSize];
+//             int[][] inputMatrix = new int[matrixSize][matrixSize];
             
-            while (inputReader1.hasNextLine()) {
-                int[] currentInputs;
+//             while (inputReader1.hasNextLine()) {
+//                 int[] currentInputs;
 
-                //  Populating our matrix.
-                for (int row = 0; row < matrixSize; row++){
-                    String nextLine = inputReader1.nextLine();
-                    currentInputs = Arrays.stream(nextLine.split(" ")).mapToInt(Integer::parseInt).toArray();
+//                 //  Populating our matrix.
+//                 for (int row = 0; row < matrixSize; row++){
+//                     String nextLine = inputReader1.nextLine();
+//                     currentInputs = Arrays.stream(nextLine.split(" ")).mapToInt(Integer::parseInt).toArray();
 
-                    for (int col = 0; col < matrixSize; col++) {
-                    inputMatrix[row][col] = currentInputs[col];
-                    }
-                }
+//                     for (int col = 0; col < matrixSize; col++) {
+//                     inputMatrix[row][col] = currentInputs[col];
+//                     }
+//                 }
 
-                System.out.println(Arrays.deepToString(inputMatrix));
-            }
-            System.out.println(Driver_lab3a.cofModDet(input[0],inputMatrix));
-            assertEquals(Driver_lab3a.cofModDet(input[0],inputMatrix), ans);
-        } catch (FileNotFoundException e) {
-            System.err.println(error);
-            e.printStackTrace();
-        }
-    }
+//                 System.out.println(Arrays.deepToString(inputMatrix));
+//             }
+//             System.out.println(Driver_lab3a.cofModDet(input[0],inputMatrix));
+//             assertEquals(Driver_lab3a.cofModDet(input[0],inputMatrix), ans);
+//         } catch (FileNotFoundException e) {
+//             System.err.println(error);
+//             e.printStackTrace();
+//         }
+//     }
     
-}
+// }

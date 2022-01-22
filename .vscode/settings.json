@@ -1,0 +1,10 @@
+{
+    "java.project.sourcePaths": [
+        "VSCodeTests/tests",
+        "VSCodeTests/src",
+        "VSCodeTests/lib"
+    ],
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar"
+    ]
+}

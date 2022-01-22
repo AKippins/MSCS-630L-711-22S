@@ -1,0 +1,17 @@
+<component name="libraryTable">
+  <library name="lib1">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/VSCodeTests/lib/junit-platform-engine-1.5.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/VSCodeTests/lib/junit-jupiter-5.5.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/VSCodeTests/lib/junit-platform-commons-1.5.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/VSCodeTests/lib/junit-jupiter-params-5.5.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/VSCodeTests/lib/junit-jupiter-api-5.5.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/VSCodeTests/lib/junit-platform-console-standalone-1.7.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/VSCodeTests/lib/junit-jupiter-engine-5.5.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/VSCodeTests/lib/apiguardian-api-1.1.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/VSCodeTests/lib/opentest4j-1.2.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
